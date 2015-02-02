@@ -17,12 +17,12 @@ public class PlayersController : MonoBehaviour {
 			{
 				if(hit.transform.tag != "Player")
 				{
-					if(mousePos.x < Screen.width/2)//player 1 pos
+					if(mousePos.x < Screen.width/2+50)//player 1 pos
 					{
 						Vector3 player01Movement = Vector3.MoveTowards(player01.transform.position,hit.point,speed * Time.deltaTime);
 						player01.rigidbody.MovePosition(player01Movement);
 					}
-					if(mousePos.x > Screen.width/2)//player 2 pos
+					if(mousePos.x > Screen.width/2-50)//player 2 pos
 					{
 						Vector3 player02Movement = Vector3.MoveTowards(player02.transform.position,hit.point,speed * Time.deltaTime);
 						player02.rigidbody.MovePosition(player02Movement);
